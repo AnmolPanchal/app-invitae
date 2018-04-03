@@ -1,11 +1,11 @@
 # To-Do
-[ ] - Change TSV to JSON (Ruby script) --> Populate MongoDB collection
-[ ] - Connect MongoDB Backend
-[ ] - Create Routes/API
-[ ] - Create Pagination
-[ ] - Deploy to Heroku
-[ ] - Connect Heroku with Mongo
-[ ] - Finish!
+[ ] - Change TSV to JSON (Ruby script) --> Populate MongoDB collection  
+[ ] - Connect MongoDB Backend  
+[ ] - Create Routes/API  
+[ ] - Create Pagination  
+[ ] - Deploy to Heroku  
+[ ] - Connect Heroku with Mongo  
+[ ] - Finish!  
 
 Assignment
 -----------------
