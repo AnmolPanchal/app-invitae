@@ -9,11 +9,11 @@
   },
   "scripts": {
     "server-dev": "nodemon --inspect server/index.js",
-    "start": "react-scripts start",
+    "server-start": "react-scripts start",
+    "start": "npm install, npm run server-dev; npm run server-start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "postinstall": "npm install; npm run server-dev; npm start"
+    "eject": "react-scripts eject"
   },
   "dependencies": {
     "axios": "^0.18.0",
