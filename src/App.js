@@ -34,7 +34,7 @@ export default class App extends Component {
 
     componentDidMount() {
         axios
-            .get("http://localhost:3001/all")
+          .get("/all")
             .then(response => {
                 console.log(response.data[0])
                 this.setState({
