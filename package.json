@@ -2,23 +2,23 @@
   "name": "Invitae",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3001",
   "engines": {
     "node": "8.10.0",
     "npm": "5.6.x"
   },
   "scripts": {
     "server-dev": "nodemon --inspect server/index.js",
+    "sass-dev": "sass --watch src:src/styles --sourcemap=none",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "postinstall": "npm install && npm run server-dev && npm start"
+    "postinstall": "npm run build"
   },
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.18.2",
-    "dotenv": "^5.0.0",
+    "dotenv": "^5.0.1",
     "express": "^4.16.3",
     "mongodb": "^3.0.5",
     "nodemon": "^1.17.3",
