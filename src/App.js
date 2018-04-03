@@ -40,19 +40,18 @@ export default class App extends Component {
            searchActive: false,
            suggestions: [],
            genes: [],
+           data: [],
            value: ''
         }
     }
 
     componentDidMount() {
         axios
-            .get("localhost:3000/test")
+            .get("http://localhost:3001/all")
             .then(response => {
-                console.log(response)
+                console.log(response.data);
             })
-            .catch(err => {
-                console.error(err);
-            })
+            .catch(err => console.error(err));
     }
 
     onChange = (event, { newValue, method }) => {
