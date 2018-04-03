@@ -10,24 +10,11 @@ import DNAList from './DNAList.js';
 // Helpers
 import './styles.css';
 import axios from 'axios';
-import data from './testData/data.js';
+// import data from './testData/data.js';
 import logo from './logo.png';
 
 const escapeRegexCharacters = str => str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   
-const getSuggestions = value => {
-    let result = null;
-    if (value) {
-        const escapedValue = escapeRegexCharacters(value.trim());
-
-        if (escapedValue === '') return [];
-
-        const regex = new RegExp('^' + escapedValue, 'i');
-        result = data.filter(item => regex.test(item['Gene']));
-    }
-
-    return result;
-};
 
   const getSuggestionValue = suggestion => suggestion['Gene'];
 
@@ -49,10 +36,26 @@ export default class App extends Component {
         axios
             .get("http://localhost:3001/all")
             .then(response => {
-                console.log(response.data);
+                console.log(response.data[0])
+                this.setState({
+                    data: response.data
+                })
             })
             .catch(err => console.error(err));
     }
+    getSuggestions = value => {
+        let result = null;
+        if (value) {
+            const escapedValue = escapeRegexCharacters(value.trim());
+
+            if (escapedValue === '') return [];
+
+            const regex = new RegExp('^' + escapedValue, 'i');
+                result = this.state.data.filter(item => regex.test(item['Gene']));
+    }
+
+    return result;
+};
 
     onChange = (event, { newValue, method }) => {
         console.log('call onChange')
@@ -66,7 +69,7 @@ export default class App extends Component {
         if (e.key === 'Enter')  {
             this.setState({
                 suggestions: [],
-                genes: getSuggestions(this.state.value)
+                genes: this.getSuggestions(this.state.value)
             });
         }
     }
@@ -76,7 +79,7 @@ export default class App extends Component {
       onSuggestionsFetchRequested = ({ value }) => {
         // console.log('call onFetchReq')
         this.setState({
-          suggestions: getSuggestions(value),
+          suggestions: this.getSuggestions(value),
         });
       };
     

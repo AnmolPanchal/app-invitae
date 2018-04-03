@@ -6,7 +6,7 @@ import { Table } from 'react-bootstrap';
 const DNAList = props => { 
     let dnas, headers;
     if (props.data && props.data.length > 0) 
-        dnas = props.data.map(dna => <DNA data={dna} key={dna['Chr']} />)
+        dnas = props.data.map(dna => <DNA data={dna} key={dna['_id']} />)
 
     headers = dnas ? <DNAHeaders /> : <thead></thead>
 
