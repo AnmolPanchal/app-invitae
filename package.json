@@ -10,7 +10,7 @@
   "scripts": {
     "server-dev": "nodemon --inspect server/index.js",
     "server-start": "react-scripts start",
-    "start": "npm install; npm run build",
+    "start": "npm install; npm run build; npm run server-start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
