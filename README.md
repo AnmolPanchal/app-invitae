@@ -11,9 +11,9 @@
 [x] - Connect MongoDB Backend  
 [x] - Create Routes/API  
 [ ] - Create Pagination  
-[ ] - Deploy to Heroku  
+[x] - Deploy to Heroku  
 [x] - Connect Heroku with mLab Mongo  
-[ ] - Finish!  
+[x] - Finish!  
 
 # Improvements ahead
 [ ] Autocomplete drop-down is not 100% responsive    
