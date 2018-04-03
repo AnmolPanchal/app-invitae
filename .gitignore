@@ -23,3 +23,5 @@ yarn-error.log*
 /big-breaker/big-files
 
 package-lock.json
+
+.env
