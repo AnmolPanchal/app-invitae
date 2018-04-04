@@ -8,7 +8,6 @@
   },
   "scripts": {
     "server-dev": "nodemon --inspect server/index.js",
-    "sass-dev": "sass --watch src:src/styles --sourcemap=none",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
