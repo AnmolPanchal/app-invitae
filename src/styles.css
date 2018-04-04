@@ -1,7 +1,7 @@
 body, html {
   font-family: Helvetica, sans-serif;
   height: 100%;
-  background: #5a58cc;
+  background: #758a74;
   background-blend-mode: multiply;
 }
 
@@ -122,18 +122,19 @@ th {
   background-color: #ddd;
 }
 
-.search-button {
-  width: 150px;
-  margin: 20px auto;
-  border-radius: 10px;
-  font-size: .95em;
-  color: #222;
-  text-transform: uppercase;
-  display: block;
-  padding: 1em;
-  transition: .7s;
+.social-media {
+  margin: 5px 15px;
+  transition-duration: .4s;
+  transition-timing-function: ease-out;
 }
-.search-button:hover {
-  color: #fff;
-  background: seagreen;
+
+.social-media:hover {
+  transform: scale(1.2); 
+}
+
+.footer {
+  position: fixed;
+  bottom: 15px;
+  right: 30px;
+  text-align: center;
 }

@@ -1,11 +1,11 @@
 // React 
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import Autosuggest from 'react-autosuggest';
 import { BrowserRouter } from 'react-router-dom';
 
 // Components
 import DNAList from './DNAList.js';
+import Footer from './Footer';
 
 // Helpers
 import './styles.css';
@@ -110,18 +110,21 @@ export default class App extends Component {
     
         return (
             <BrowserRouter>
-                <div className="main-header fadeinLeft">
-                    <img className="img-logo" src={logo} />
-                        <Autosuggest
-                            onSuggestionSelected={this.suggestionSelected}
-                            suggestions={suggestions}
-                            onSuggestionsClearRequested={this.onSuggestionsClearRequested}
-                            onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
-                            getSuggestionValue={getSuggestionValue}
-                            renderSuggestion={renderSuggestion}
-                            inputProps={inputProps}
-                        />
-                    {dnaList}
+                <div className="container">
+                    <div className="main-header fadeinLeft">
+                        <img className="img-logo" src={logo} alt="invitae-logo"/>
+                            <Autosuggest
+                                onSuggestionSelected={this.suggestionSelected}
+                                suggestions={suggestions}
+                                onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+                                onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
+                                getSuggestionValue={getSuggestionValue}
+                                renderSuggestion={renderSuggestion}
+                                inputProps={inputProps}
+                            />
+                        {dnaList}
+                    </div>
+                    <Footer />
                 </div>
             </BrowserRouter>
         );
