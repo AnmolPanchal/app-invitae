@@ -10,10 +10,6 @@
 [x] - Convert TSV to JSON (Ruby script) --> Populate MongoDB collection   
 [x] - Connect MongoDB Backend  
 [x] - Create Routes/API  
-<<<<<<< HEAD
-=======
-[ ] - Create Pagination  
->>>>>>> fd8573a1cc4bc50cd612f08ab39bab067f6504cf
 [x] - Deploy to Heroku  
 [x] - Connect Heroku with mLab Mongo  
 [x] - Finish!  
