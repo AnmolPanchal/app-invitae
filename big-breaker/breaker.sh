@@ -1,3 +1,6 @@
+# Split BIG file into little chunks
+# gsplit -l 10000 -d --additional-suffix=.tsv invitae-data.tsv fileName
+
 export FIELDS=Gene,Nucleotide,Change,Protein,Change,Other,Mappings,Alias,Transcripts,Region,Reported,Classification,Inferred,Classification,Source,Last,Evaluated,Last,Updated,URL,Submitter,Comment,Assembly,Chr,Genomic,Start,Genomic,Stop,Ref,Alt,Accession,Reported,Ref,Reported,Alt
 
 COUNTER=0
